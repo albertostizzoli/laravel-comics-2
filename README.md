@@ -1,12 +1,25 @@
-## esercizio di oggi:
+## esercizio di oggi: LARAVEL-COMICS-2
 
-## nome repo: laravel-comics
+## nome repo: laravel-comics-2
 
-Create un nuovo progetto Laravel. Concentratevi sul layout: create un file di layout in cui inserire la struttura comune di tutte le pagine del sito web (tag head, tag body, ...) eventualmente includendo header e footer tramite due partials.
-Create poi una rotta per visualizzare la lista di tutti i fumetti recuperati da un file inserito nella cartella config e abbellite il tutto sfruttando Sass.
+Oggi create un nuovo progetto Laravel 9 per gestire un archivio di fumetti.
+
+## Milestone 1
+
+Tramite gli appositi comandi artisan create un model con relativa migration e seeder e resource controller.
+Editate la resource route
+
+## Milestone 2
+
+Iniziate a definire le prime operazioni CRUD con le relative view dove necessarie:
+- index()
+- show()
+- create()
+- store() (solo dump dei dati)
 
 ## Bonus:
-Create più pagine istituzionali che condividono lo stesso layout (utilizzando il routing)
+
+Procedere con il salvataggio dei dati sul db
 
 
 # copio file .env.example e lo rinomino in .env
