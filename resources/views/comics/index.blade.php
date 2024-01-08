@@ -16,8 +16,9 @@
                     </div>
                 @endforeach
             </div>
-            <div class="bottom-btn">
+            <div class="bottom-btn d-flex justify-content-around align-items-center">
                 <button class="btn-blue">LOAD MORE</button>
+                <button class="btn-blue"><a href="{{route('comics.create')}}">CREATE A NEW COMIC</a></button>
             </div>
         </div>
     </div>
