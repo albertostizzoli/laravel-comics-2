@@ -1,0 +1,31 @@
+footer {
+    background-color: #0282F9;
+
+    .top-footer {
+        position: relative;
+        z-index: 1000;
+
+        img {
+            width: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 40px 10px;
+
+
+            li {
+                display: flex;
+                align-items: center;
+
+                a {
+                    text-transform: uppercase;
+                    color: white;
+                    text-decoration: none;
+                    padding: 3px 3px;
+                }
+            }
+        }
+    }
+
+}

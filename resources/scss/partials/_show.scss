@@ -1,0 +1,65 @@
+#comics {
+    .space-blue {
+        background-color: #0282F9;
+        height: 60px;
+
+        .small {
+            position: relative;
+            width: 100%;
+
+            .cover {
+                border: 3px solid white;
+                position: absolute;
+                bottom: 0;
+                left: 180px;
+                transform: translateY(15%);
+
+
+                .comic {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #0282F9;
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                }
+
+                .gallery {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #0282F9;
+                    color: white;
+                    text-transform: uppercase;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .col-8 {
+        padding: 15px;
+
+        .green {
+            background-color: #55BA59;
+
+
+            span {
+                color: white;
+            }
+
+            .col-9,
+            .col-3 {
+                padding: 10px;
+                border: 1px solid black;
+            }
+        }
+    }
+        img {
+            width: 100%;
+        }
+    }
+
+
