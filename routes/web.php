@@ -15,19 +15,8 @@ use App\Http\Controllers\ComicController;
 */
 
 Route::get('/', function () {
-
     return to_route('comics.index');
 })->name('home');
 
-
-/*Route::get('/comic/{id}', function ($id) {
-    $comics = config('db.comics');
-    if ($id >= 0 && $id < count($comics)) {
-        $comic = $comics[$id];
-        return view('show', compact('comic'));
-    } else {
-        abort(404);
-    }
-})->name('show');*/
 
 Route::resource('comics', ComicController::class);
