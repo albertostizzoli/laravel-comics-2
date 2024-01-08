@@ -44,9 +44,10 @@ class ComicController extends Controller
         $new_comic->thumb = $form_data["thumb"];
         $new_comic->price = $form_data["price"];
         $new_comic->sale_date = $form_data["sale_date"];
-        $new_comic->series = $form_data["series"];
+        $new_comic->series = '2020-07-01';
         $new_comic->type = $form_data["type"];
         $new_comic->save();
+        //dd($request->all());
         return to_route("comics.index");
     }
 
