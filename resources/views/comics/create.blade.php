@@ -10,29 +10,40 @@
                 <form method="POST" action="{{ route('comics.store') }}">
                     @csrf
                     <div class="mb-3">
-                        <label for="Title" class="form-label">Title</label>
+                        <label for="title" class="form-label">Title</label>
                         <input type="text" class="form-control" id="title" placeholder="Insert a Title" name="title">
                     </div>
                     <div class="mb-3">
-                        <label for="Price" class="form-label">Price</label>
+                        <label for="price" class="form-label">Price</label>
                         <input type="text" class="form-control" id="price" placeholder="Insert a Price"
                             name="price">
                     </div>
                     <div class="mb-3">
-                        <label for="Type" class="form-label">Type</label>
+                        <label for="type" class="form-label">Type</label>
                         <input type="text" class="form-control" id="type" placeholder="Insert a Type"
                             name="type">
                     </div>
                     <div class="mb-3">
-                        <label for="Series" class="form-label">Series</label>
+                        <label for="series" class="form-label">Series</label>
                         <input type="text" class="form-control" id="series" placeholder="Insert a Series"
                             name="series">
                     </div>
-                    <div class="form-floating">
-                        <label for="Description" class="form-label">Description</label>
-                        <textarea class="form-control" placeholder="Insert a Description" id="description" name="description"></textarea>
-                      </div>
-                    <button type="submit" class="btn btn-primary p-2 m-2">Create a New Comic</button>
+                    <div class="mb-3">
+                        <label for="sale_date" class="form-label">Sale Date</label>
+                        <input type="text" class="form-control" id="sale_date" placeholder="Insert a Sale Date"
+                            name="sale_date">
+                    </div>
+                    <div class="mb-3">
+                        <label for="thumb" class="form-label">Image</label>
+                        <input type="text" class="form-control" id="thumb" placeholder="Insert a Image"
+                            name="thumb">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="description"
+                            name="description">
+                    </div>
+                    <button type="submit" class="btn btn-primary p-2 mt-4">Create a New Comic</button>
                 </form>
             </div>
         </div>
