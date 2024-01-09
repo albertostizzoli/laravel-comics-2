@@ -89,11 +89,11 @@ class ComicController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Comic  $comic
-     *
+     *functio
      */
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return to_route('comics.index')->with('message', "Il prodotto $comic->title è stato eliminato");
+        return to_route('comics.index');
     }
 }
