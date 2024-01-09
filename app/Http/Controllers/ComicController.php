@@ -49,7 +49,7 @@ class ComicController extends Controller
         $new_comic->type = $form_data["type"];
         $new_comic->save();
         //dd($request->all());
-        return to_route("comics.index");
+        return to_route("comics.index", $new_comic->id);
     }
 
     /**
@@ -85,14 +85,13 @@ class ComicController extends Controller
     {
 
         $form_data = $request->all();
-        $comic->fill($form_data);
-        /*$comic->title = $form_data["title"];
+        $comic->title = $form_data["title"];
         $comic->description = $form_data["description"];
         $comic->thumb = $form_data["thumb"];
         $comic->price = $form_data["price"];
         $comic->sale_date = '2020-07-01';
         $comic->series = $form_data["series"];
-        $comic->type = $form_data["type"];*/
+        $comic->type = $form_data["type"];
         $comic->update();
         return to_route('comics.show', $comic->id);
     }
