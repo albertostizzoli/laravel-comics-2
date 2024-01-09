@@ -66,11 +66,14 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-around align-items-center">
                     <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger">DELETE THIS COMIC</button>
                     </form>
+                    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary">CHANGE THIS COMIC</a>
+                    </div>
                 </div>
             </div>
         </div>
