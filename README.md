@@ -2,6 +2,7 @@
 
 ## nome repo: laravel-comics-2
 
+## 1'Parte: 08/01/2024
 Oggi create un nuovo progetto Laravel 9 per gestire un archivio di fumetti.
 
 ## Milestone 1
@@ -20,6 +21,16 @@ Iniziate a definire le prime operazioni CRUD con le relative view dove necessari
 ## Bonus:
 
 Procedere con il salvataggio dei dati sul db
+
+## 2'Parte: 09/01/2024
+
+## nome repo: laravel-comics-2 (la stessa di ieri)
+
+Ciao ragazzi,
+oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.
+
+## Bonus:
+Aggiungere validazioni e messaggi di errore e alla cancellazione messaggio di conferma all'utente
 
 
 # copio file .env.example e lo rinomino in .env
