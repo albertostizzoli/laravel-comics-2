@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pb-3">
+            <div class="pb-3 ">
                 <div class="col-6">
                     <table class="table">
                         <thead>
@@ -66,6 +66,11 @@
                             </tr>
                         </tbody>
                     </table>
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">DELETE THIS COMIC</button>
+                    </form>
                 </div>
             </div>
         </div>

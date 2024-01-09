@@ -66,11 +66,11 @@ class ComicController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Comic  $comic
-     * @return \Illuminate\Http\Response
+     * @return  \Illuminate\View\View
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -89,10 +89,11 @@ class ComicController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Comic  $comic
-     * @return \Illuminate\Http\Response
+     *
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return to_route('comics.index')->with('message', "Il prodotto $comic->title è stato eliminato");
     }
 }
