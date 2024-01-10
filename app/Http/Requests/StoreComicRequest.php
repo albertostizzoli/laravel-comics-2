@@ -26,6 +26,7 @@ class StoreComicRequest extends FormRequest
         return [
             'title' => 'required|min:5|max:255|unique:comics',
             'type' => 'required|max:50',
+            'thumb' => 'required',
             'description' => 'nullable',
             'price' => 'required',
             'series' => 'required|max:50',
@@ -42,6 +43,7 @@ class StoreComicRequest extends FormRequest
             'title.unique' => 'Il titolo deve essere univoco',
             'type.required' => 'Il tipo è obbligatorio',
             'type.max' => 'Il tipo non può superare i :max caratteri',
+            'thumb.required' => 'L\'immagine è obbligatoria',
             'price.required' => 'Il prezzo è obbligatorio',
             'series.required' => 'La serie è obbligatoria',
             'series.max' => 'La serie non può superare i :max caratteri',

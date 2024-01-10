@@ -54,7 +54,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Image</label>
-                        <input type="url" class="form-control" id="thumb" value="{{ old('thumb', $comic->thumb) }}"
+                        <input type="text" class="form-control" id="thumb" value="{{ old('thumb', $comic->thumb) }}"
                             placeholder="Insert a Image" name="thumb">
                     </div>
                     <textarea name="description" id="description" cols="100" rows="10">
