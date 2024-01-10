@@ -19,23 +19,35 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="price" placeholder="Insert a Price"
+                        <input type="text" value="{{old('price')}}" class="form-control  @error('price') is-invalid @enderror" id="price" placeholder="Insert a Price"
                             name="price">
+                            @error('price')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="type" class="form-label">Type</label>
-                        <input type="text" class="form-control" id="type" placeholder="Insert a Type"
+                        <input type="text" value="{{old('type')}}" class="form-control  @error('type') is-invalid @enderror" id="type" placeholder="Insert a Type"
                             name="type">
+                            @error('type')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="series" class="form-label">Series</label>
-                        <input type="text" class="form-control" id="series" placeholder="Insert a Series"
+                        <input type="text" value="{{old('series')}}" class="form-control  @error('series') is-invalid @enderror" id="series" placeholder="Insert a Series"
                             name="series">
+                            @error('series')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="sale_date" class="form-label">Sale Date</label>
-                        <input type="text" class="form-control" id="sale_date" placeholder="Insert a Sale Date"
+                        <input type="text" value="{{old('sale_date')}}" class="form-control  @error('sale_date') is-invalid @enderror" id="sale_date" placeholder="Insert a Sale Date"
                             name="sale_date">
+                            @error('sale_date')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Image</label>
