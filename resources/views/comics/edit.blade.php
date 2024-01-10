@@ -45,8 +45,10 @@
                     <textarea name="description" id="description" cols="100" rows="10">
                     {{ old('description', $comic->description) }}"
                 </textarea>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-danger p-3 mt-2">CHANGE THIS COMIC</button>
+                    </div>
                 </form>
-                <button type="submit" class="btn btn-danger p-3 mt-2">CHANGE THIS COMIC</button>
             </div>
         </div>
     </div>
