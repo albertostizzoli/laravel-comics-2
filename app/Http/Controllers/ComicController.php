@@ -17,11 +17,19 @@ class ComicController extends Controller
      *
      * @return  \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
-        $comics = Comic::all();
-        return view('comics.index', compact('comics'));
+        if (!empty($request->query("genre"))) {
+            //con una select che fa il filtro della ricerca
+            $search = $request->query('genre');
+            //dd($search);
+            $comics = Comic::where('type', 'LIKE', $search . '%')->get();
+        } else {
+            $comics = Comic::all();
+        }
+        return view("comics.index", compact("comics"));
     }
+
 
     /**
      * Show the form for creating a new resource.
