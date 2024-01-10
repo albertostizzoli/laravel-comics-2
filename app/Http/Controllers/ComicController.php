@@ -6,8 +6,8 @@ use App\Models\Comic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
-//use App\Http\Requests\UpdateComicRequest;
-//use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
+use App\Http\Requests\StoreComicRequest;
 
 class ComicController extends Controller
 {
@@ -38,12 +38,12 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      *
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
 
-        $form_data = $request->all();
+        //$form_data = $request->all();
 
-        $new_comic = new Comic();
+        /*$new_comic = new Comic();
         $new_comic->title = $form_data["title"];
         $new_comic->description = $form_data["description"];
         $new_comic->thumb = $form_data["thumb"];
@@ -51,10 +51,10 @@ class ComicController extends Controller
         $new_comic->sale_date = '2020-07-01';
         $new_comic->series = $form_data["series"];
         $new_comic->type = $form_data["type"];
-        $new_comic->save();
-        //$form_data = $this->validation($request->all());
-        //$form_data = $request->validated();
-        //$new_comic = Comic::create($form_data);
+        $new_comic->save();*/
+        $form_data = $this->validation($request->all());
+        $form_data = $request->validated();
+        $new_comic = Comic::create($form_data);
         return to_route("comics.index", $new_comic->id);
     }
 
@@ -87,11 +87,11 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      *
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        //$form_data = $this->validation($request->all());
-        //$form_data = $request->validated();
-        $form_data = $request->all();
+        $form_data = $this->validation($request->all());
+        $form_data = $request->validated();
+        //$form_data = $request->all();
         $comic->fill($form_data);
         $comic->update();
         return to_route('comics.show', $comic->id);
@@ -109,12 +109,12 @@ class ComicController extends Controller
         return to_route('comics.index')->with('message', "Il prodotto $comic->title è stato eliminato");
     }
 
-    /*private function validation($data)
+    private function validation($data)
     {
         $validator = Validator::make($data, [
             'title' => 'required|min:5|max:255|unique:comics',
             'type' => 'required|max:50',
-            'description' => 'required|max:255',
+            'description' => 'nullable',
             'price' => 'required|numeric',
             'series' => 'required|max:50',
             'sale_date' => 'required|date_format:Y-m-d',
@@ -133,5 +133,5 @@ class ComicController extends Controller
             'sale_date.date_format' => 'La data di vendita deve essere nel formato AAAA-MM-GG',
         ])->validate();
         return $validator;
-    }*/
+    }
 }
