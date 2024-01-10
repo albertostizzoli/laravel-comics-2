@@ -53,7 +53,7 @@ class ComicController extends Controller
         $new_comic->series = $form_data["series"];
         $new_comic->type = $form_data["type"];
         $new_comic->save();*/
-        $form_data = $this->validation($request->all());
+        //$form_data = $this->validation($request->all());
         $form_data = $request->validated();
         $new_comic = Comic::create($form_data);
         return to_route("comics.index", $new_comic->id);
@@ -90,7 +90,7 @@ class ComicController extends Controller
      */
     public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $form_data = $this->validation($request->all());
+        //$form_data = $this->validation($request->all());
         $form_data = $request->validated();
         //$form_data = $request->all();
         $comic->fill($form_data);

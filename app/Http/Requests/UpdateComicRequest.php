@@ -27,7 +27,7 @@ class UpdateComicRequest extends FormRequest
             'title' => 'required|min:5|max:255|unique:comics',
             'type' => 'required|max:50',
             'description' => 'nullable',
-            'price' => 'required|numeric',
+            'price' => 'required',
             'series' => 'required|max:50',
             'sale_date' => 'required|date_format:Y-m-d',
         ];
@@ -42,7 +42,6 @@ class UpdateComicRequest extends FormRequest
             'title.unique' => 'Il titolo deve essere univoco',
             'type.required' => 'Il tipo è obbligatorio',
             'type.max' => 'Il tipo non può superare i :max caratteri',
-            'price.required' => 'Il prezzo è obbligatorio',
             'price.numeric' => 'Il prezzo deve essere un numero',
             'series.required' => 'La serie è obbligatoria',
             'series.max' => 'La serie non può superare i :max caratteri',
