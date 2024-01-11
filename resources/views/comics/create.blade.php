@@ -51,7 +51,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Image</label>
-                        <input type="text" value="{{old('thumb')}}" class="form-control @error('thumb') is-invalid @enderror" id="thumb" placeholder="Insert a Image"
+                        <input type="text" value="{{old('thumb')}}" class="form-control" id="thumb" placeholder="Insert a Image"
                             name="thumb">
                     </div>
                     <div class="mb-3">
